@@ -1,9 +1,9 @@
 #include <stdio.h>
-#include <time.h>
+#include <time.h>/
 #include <stdlib.h>
 
 /**
- * Main - The main function is the starting point of execution for the program
+ * main - The main function is the starting point of execution for the program
  * Description:
  * Return: Always 0 (success)
  */
