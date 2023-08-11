@@ -1,8 +1,7 @@
 #include <stdio.h>
 
-/*
- * main - Entry point
- *
+/**
+ * main - The main function is the starting point of execution for the program
  * Description: 'Prints all characters of the alphabet'
  * Return: always 0 (success)
 */
