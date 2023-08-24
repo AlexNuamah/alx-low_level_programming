@@ -1,29 +1,34 @@
 #include "main.h"
 
 /**
- * _strcat - Concatenates the @src string into the
- * @dest string.
+ * _strcat - concatinate the values of two integers.
  *
- * @dest: The destination string that holds the
- * concatenation
- * @src: The source string to be appended to
- * @dest
+ * @dest: arg a
  *
- * Return: The @dest concatenated string
- **/
+ * @src: arg b
+ *
+ * Return: void.
+ */
+
 char *_strcat(char *dest, char *src)
 {
-	int dest_index = 0;
-	int src_index = 0;
+	int i, j;
 
-	while (dest[dest_index] != '\0')
+	i = 0;
+
+	while (dest[i] != '\0')
 	{
-		dest_index++;
+		i++;
 	}
-	while (src[src_index] != '\0')
+
+	j = 0;
+
+	while (src[j] != '\0')
 	{
-		src_index++;
-		dest_index++;
+		dest[i] = src[j];
+		i++;
+		j++;
 	}
+	dest[i] = '\0';
 	return (dest);
 }
