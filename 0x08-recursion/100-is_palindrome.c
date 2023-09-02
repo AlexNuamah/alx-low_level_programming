@@ -1,61 +1,45 @@
 #include "main.h"
 
+int compare_letters(char *s, int start, int end);
+
 /**
- * strlen_rec - Strings lengths
+ * is_palindrome - Checks whether the given string @s
+ * is a palindrome.
  *
- * @str: chars
+ * @s: The given string
  *
- * Return: the integers len
- */
-
-int strlen_rec(char *str)
+ * Return: 1 if @s is a palindrome. Otherwise 0
+ *
+ **/
+int is_palindrome(char *s)
 {
-	if (*str)
-	{
-		str++;
+	int end = strlen(s);
+	int start = 0;
 
-		return (1 + strlen_rec(str));
-	}
-	return (0);
+	return (compare_letters(s, start, end - 1));
 }
 
 /**
- * helpers_pals - Returns Palindrones
+ * compare_letters - Get the charaters at specified position
+ * @start and @end.
  *
- * @str: char
+ * @s: The given string
+ * @start: Get the position of the character to the left
+ * @end: Get the position of the character to teh right
  *
- * @length: int
+ * Return: A value after comparing characters at both
+ * @start and @end
  *
- * @count: int
- *
- * Returns: the integer length
- */
-
-int helpers_pals(char *str, int length, int count)
+ **/
+int compare_letters(char *s, int start, int end)
 {
-	if (count >= length)
+	if (start < end)
+	{
+		return (compare_letters(s, start + 1, end - 1));
+	}
+	if (s[start] == s[end])
 	{
 		return (1);
 	}
-	if (str[length] == str[count])
-	{
-		return (helpers_pals(str, length - 1, count + 1));
-	}
 	return (0);
-}
-
-/**
- * is_palindrome - returs 1 if a string is a palindrome and 0 if not
- *
- * @s: char
- *
- * Return: the integer length
- */
-
-int is_palindrome(char *s)
-{
-	int length = strlen_rec(s);
-	int count = 0;
-
-	return (helpers_pals(s, length - 1, count));
 }
