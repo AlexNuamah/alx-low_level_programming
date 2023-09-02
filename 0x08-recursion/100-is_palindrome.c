@@ -1,4 +1,5 @@
 #include "main.h"
+#include <string.h>
 
 int compare_letters(char *s, int start, int end);
 
