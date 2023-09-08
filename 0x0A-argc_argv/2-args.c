@@ -1,5 +1,4 @@
-#include "main.h"
-
+#include <stdio.h>
 /**
  * main - Display the arguments sent into the program.
  * This is the entry point into the program.
@@ -12,11 +11,14 @@
  * Return: The success exit code
  *
  **/
-int main(int __attribute__((unused))argc, char *argv[])
+int main(int argc, char *argv[])
 {
-	while (*argv)
+	int i;
+
+	for (i = 0; i < argc; i++)
 	{
-		printf("%s\n", *argv++);
+	printf("%s\n", argv[i]);
 	}
-	return (EXIT_SUCCESS);
+
+	return (0);
 }
