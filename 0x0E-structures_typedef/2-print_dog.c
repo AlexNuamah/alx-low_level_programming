@@ -1,6 +1,6 @@
 /*
  * File: 2-print_dog_alternative.c
- * Auth: Joel osei
+ * Auth: Alexander Nuamah Jr
  */
 
 #include "dog.h"
