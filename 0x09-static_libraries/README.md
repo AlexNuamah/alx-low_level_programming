@@ -1,0 +1,1 @@
+Working with static labrary in c programming.
